@@ -1,0 +1,61 @@
+@model TechInTriunfo.Models.Carrinho
+@{
+    ViewData["Title"] = "Carrinho de Compras";
+}
+
+<div class="carrinho-container">
+    @if (TempData["Sucesso"] != null)
+    {
+        <div class="alert alert-success">@TempData["Sucesso"]</div>
+    }
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Erro"]</div>
+    }
+
+    @if (Model?.Itens?.Any() == true)
+    {
+        <div class="produtos-lista">
+            @foreach (var item in Model.Itens)
+            {
+                <div class="produto-item">
+                    <div class="imagem-produto">
+                        @if (item.Imagem != null)
+                        {
+                            <img src="data:image/png;base64,@Convert.ToBase64String(item.Imagem)" 
+                                 alt="@item.Nome" />
+                        }
+                    </div>
+                    <div class="produto-info">
+                        <h4>@item.Nome</h4>
+                        <p class="preco-unitario">@item.Valor.ToString("C")</p>
+                        <p class="quantidade">Quantidade: @item.Quantidade</p>
+                        <p class="total-item">Total: @((item.Valor * item.Quantidade).ToString("C"))</p>
+                        <form asp-action="Remove" method="post">
+                            <input type="hidden" name="produtoId" value="@item.ProdutoId" />
+                            <button type="submit" class="btn-remover">
+                                <i class="bi bi-trash"></i> Remover
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="resumo-compra">
+            <h3 class="total-carrinho">Total: @Model.Total.ToString("C")</h3>
+            <form asp-action="FinalizarCompra" method="post">
+                <button type="submit" class="btn-finalizar">
+                    <i class="bi bi-currency-dollar"></i> Finalizar Compra
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="carrinho-vazio">
+            <i class="bi bi-cart-x"></i>
+            <p>Seu carrinho está vazio</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,48 @@
+@model TechInTriunfo.Models.Contato
+
+@{
+    ViewData["Title"] = "Fale Conosco";
+}
+
+<main>
+    <div class="contato-container">
+        <h1>Fale Conosco</h1>
+
+        <div class="contato-card">
+            <h2>Envie sua Mensagem</h2>
+            <form asp-action="Create" method="post">
+                <label asp-for="Nome">Nome Completo:</label>
+                <input asp-for="Nome" required>
+                
+                <label asp-for="Email">E-mail:</label>
+                <input asp-for="Email" type="email" required>
+                
+                <label asp-for="Mensagem">Sua Mensagem:</label>
+                <textarea asp-for="Mensagem" rows="5" required></textarea>
+                
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+
+        <div class="cards-atendimento">
+            <div class="card">
+                <h3>Atendimento Telefônico</h3>
+                <span class="status offline">OFFLINE</span>
+                <p>(51) 999999999</p>
+                <p>Horário: 08h às 18h (Seg-Sex)</p>
+            </div>
+
+            <div class="card">
+                <h3>Chat Online</h3>
+                <span class="status offline">OFFLINE</span>
+                <button class="btn-chat">Iniciar Conversa</button>
+            </div>
+
+            <div class="card">
+                <h3>Suporte por E-mail</h3>
+                <p>contato@techintriunfo.com.br</p>
+                <button class="btn-chat">Escrever E-mail</button>
+            </div>
+        </div>
+    </div>
+</main>

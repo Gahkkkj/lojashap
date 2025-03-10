@@ -1,0 +1,18 @@
+@model TechInTriunfo.Models.Servico
+
+<div class="container-editar">
+    <h1>Excluir Serviço</h1>
+    
+    <div class="delete-confirmation">
+        <p>Tem certeza que deseja excluir o serviço <strong>@Model.Nome</strong>?</p>
+        
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

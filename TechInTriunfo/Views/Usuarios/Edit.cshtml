@@ -1,0 +1,36 @@
+@model TechInTriunfo.Models.Usuario
+
+@{
+    ViewData["Title"] = "Editar Usuário";
+}
+
+<div class="container-editar">
+    <h1>Editar Usuário</h1>
+    
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        
+        <div class="edit-form-group">
+            <label asp-for="Nome">Nome Completo:</label>
+            <input asp-for="Nome" class="edit-form-control" required />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="edit-form-group">
+            <label asp-for="Email">E-mail:</label>
+            <input asp-for="Email" class="edit-form-control" type="email" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="edit-form-group">
+            <label asp-for="Telefone">Telefone:</label>
+            <input asp-for="Telefone" class="edit-form-control" type="tel" />
+            <span asp-validation-for="Telefone" class="text-danger"></span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

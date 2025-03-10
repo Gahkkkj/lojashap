@@ -1,0 +1,94 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    var usuarioId = Context.Session.GetInt32("UsuarioId"); 
+    var usuarioNome = Context.Session.GetString("UsuarioNome");
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tech In Triunfo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Tech In Triunfo</div>
+
+        <nav class="nav-container">
+            <div class="nav-links">
+                <div class="nav-item"><a href="@Url.Action("Index", "Produtos")">Produtos</a></div>
+                <div class="nav-item"><a href="@Url.Action("Index", "Servicos")">Serviços</a></div>
+                <div class="nav-item"><a href="@Url.Action("Create", "Contato")">Contato</a></div>
+            </div>
+        </nav>
+
+        <div class="search-bar">
+            <form asp-action="Index" asp-controller="Produtos" method="get">
+                <input type="text" name="query" placeholder="Buscar produtos..." required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <div class="header-right">
+            @if (usuarioId != null)
+            {
+                <div class="user-info">
+                    <span>@usuarioNome</span>
+                    <a href="@Url.Action("Logout", "Usuarios")" class="logout-btn">Sair</a>
+                </div>
+            }
+            else
+            {
+                <div class="login-button">
+                    <a href="@Url.Action("Login", "Usuarios")" class="login-link">Login</a>
+                    <a href="@Url.Action("Register", "Usuarios")" class="register-btn">Registrar</a>
+                </div>
+            }
+            <div class="cart">
+                <a href="@Url.Action("Index", "Carrinho")" class="cart-link">🛒Carrinho</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Contato</h3>
+                <p>Email: contato@techintriunfo.com.br</p>
+                <p>Endereço: Av. Luiz Barreto, 427 - Centro, Triunfo - RS</p>
+                <p>Telefone: (51) 99999999</p>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="~/imagens/face.png" alt="Facebook"
+                            asp-append-version="true"></a>
+                    <a href="#" target="_blank"><img src="~/imagens/twitter.png" alt="Twitter"
+                            asp-append-version="true"></a>
+                    <a href="#" target="_blank"><img src="~/imagens/insta.png" alt="Instagram"
+                            asp-append-version="true"></a>
+                    <a href="#" target="_blank"><img src="~/imagens/linke.png" alt="LinkedIn"
+                            asp-append-version="true"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

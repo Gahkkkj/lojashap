@@ -1,0 +1,29 @@
+@model IEnumerable<TechInTriunfo.Models.Contato>
+
+@{
+    ViewData["Title"] = "Contatos";
+}
+
+<div class="container-editar">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="card-container">
+        @foreach (var contato in Model)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contato</h5>
+                    <p><strong>Nome:</strong> @contato.Nome</p>
+                    <p><strong>E-mail:</strong> @contato.Email</p>
+                    <p><strong>Mensagem:</strong> @contato.Mensagem</p>
+                    <p><strong>Data:</strong> @contato.CreatedAt.ToString("dd/MM/yyyy")</p>
+                    <div class="action-buttons">
+                        <a asp-action="Delete" asp-route-id="@contato.Id" class="btn-action btn-delete">
+                            <i class="bi bi-trash"></i> Excluir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

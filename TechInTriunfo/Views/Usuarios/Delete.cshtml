@@ -1,0 +1,42 @@
+@model TechInTriunfo.Models.Usuario
+
+@{
+    ViewData["Title"] = "Excluir Usuário";
+}
+
+<div class="container-editar">
+    <h1>Excluir Usuário</h1>
+    
+    <div class="delete-confirmation">
+        <p>Tem certeza que deseja excluir o usuário <strong>@Model.Nome</strong>?</p>
+        
+        <div class="user-details">
+            <div class="edit-form-group">
+                <label>Nome:</label>
+                <div class="display-field">@Model.Nome</div>
+            </div>
+            
+            <div class="edit-form-group">
+                <label>E-mail:</label>
+                <div class="display-field">@Model.Email</div>
+            </div>
+            
+            @if (!string.IsNullOrEmpty(Model.Telefone))
+            {
+                <div class="edit-form-group">
+                    <label>Telefone:</label>
+                    <div class="display-field">@Model.Telefone</div>
+                </div>
+            }
+        </div>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

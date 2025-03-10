@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Login - Tech In Triunfo";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="senha" required>
+            </div>
+            <button type="submit" class="btn-login">Entrar</button>
+            <a href="@Url.Action("Register", "Usuarios")" class="forgot-password">Registre-se</a>
+            <a href="@Url.Action("ForgotPassword", "Usuarios")" class="forgot-password">Esqueceu a senha?</a>
+        </form>
+    </div>
+</body>
+</html>

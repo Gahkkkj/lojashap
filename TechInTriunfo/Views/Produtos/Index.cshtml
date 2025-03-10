@@ -1,0 +1,96 @@
+@model IEnumerable<TechInTriunfo.Models.Produto>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Tech In Triunfo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <main>
+        <div class="btn-cadastrar">
+            <a href="@Url.Action("Create")" class="btn-cadastrar">Cadastrar novo Produto</a>
+        </div>
+        <div class="btn-cadastrar">
+            <a href="@Url.Action("Index", "Usuarios")" class="btn-cadastrar">Lista de Usuarios</a>
+        </div>
+        <div class="btn-cadastrar">
+            <a href="@Url.Action("Index", "Contato")" class="btn-cadastrar">Lista do contatos</a>
+        </div>
+
+        <div class="contato-container">
+            <h1>Todos os Produtos</h1>
+            <div id="no-results" style="display: @(Model.Any() ? "none" : "block"); text-align: center; color: rgb(0, 0, 0);">
+                Não foram encontrados nenhum produto.
+            </div>
+
+            <div class="produtos-container">
+                @foreach (var produto in Model)
+                {
+                    <div class="produto-card" data-name="@produto.Nome.ToLower()">
+                        @if (produto.Imagem != null && produto.Imagem.Length > 0) 
+                        {
+                            var base64Image = Convert.ToBase64String(produto.Imagem);
+                            var imageSrc = $"data:image/png;base64,{base64Image}"; 
+                            <img src="@imageSrc" alt="@produto.Nome" class="produto-imagem" />
+                        }
+                        else
+                        {
+                            <img src="imagens/default.png" alt="Imagem padrão" class="produto-imagem" />
+                        }
+                        <h3>@produto.Nome</h3>
+                        <p class="destaque-preco">R$ @produto.Valor</p>
+                        <p>Quantidade: @produto.Quantidade</p>
+                        <a href="@Url.Action("Edit", new { id = produto.Id })" class="btn-comprar">Editar</a>
+                        <a href="@Url.Action("Delete", new { id = produto.Id })" class="btn-comprar">Excluir</a>
+
+                        <form action="@Url.Action("AddToCart", "Carrinho")" method="post">
+                            <input type="hidden" name="produtoId" value="@produto.Id" />
+                            <input type="hidden" name="quantidade" value="1" min="1" />
+                            <button type="submit" class="btn-comprar">Comprar</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function getQueryParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+            
+            const searchQuery = getQueryParameter('query');
+
+            if (searchQuery) {
+                console.log("Buscando por: " + searchQuery);
+                const cards = document.querySelectorAll('.produto-card');
+                let found = false;
+
+                cards.forEach(card => {
+                    const productName = card.getAttribute('data-name');
+                    if (productName.includes(searchQuery.toLowerCase())) {
+                        card.style.display = 'block';
+                        found = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                const noResultsMessage = document.getElementById('no-results');
+                if (noResultsMessage) {
+                    noResultsMessage.style.display = found ? 'none' : 'block';
+                }
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

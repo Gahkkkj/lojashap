@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Registro - Tech In Triunfo";
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <h1>Registro</h1>
+        
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+        }
+
+        <form asp-action="Register" method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="Nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="Senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmar Senha:</label>
+                <input type="password" id="confirm-password" name="ConfirmarSenha" required>
+            </div>
+            <button type="submit" class="btn-login">Registrar</button>
+            <a href="~/Usuarios/Login" class="forgot-password">Já tem uma conta? Faça login</a>
+        </form>
+    </div>
+</body>
+</html> 

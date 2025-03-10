@@ -1,0 +1,33 @@
+@model IEnumerable<TechInTriunfo.Models.Servico>
+
+@{
+    ViewData["Title"] = "Serviços";
+}
+
+<main>
+    <div class="btn-cadastrar">
+        <a href="@Url.Action("Create")" class="btn-cadastrar">Cadastrar Novo Serviço</a>
+    </div>
+    <div class="contato-container">
+        <h1>Nossos Serviços</h1>
+
+
+        <div class="produtos-container">
+
+            @foreach (var servico in Model)
+            {
+                <div class="produto-card">
+                    <h3>@servico.Nome</h3>
+                    <p class="destaque-preco">@servico.Valor.ToString("C")</p>
+                    @if (!string.IsNullOrEmpty(servico.Descricao))
+                    {
+                        <p>@servico.Descricao</p>
+                    }
+                    <a href="@Url.Action("Edit", new { id = servico.Id })" class="btn-comprar">Editar</a>
+                    <a href="@Url.Action("Delete", new { id = servico.Id })" class="btn-comprar">Excluir</a>
+                    <button class="btn-chat">Contratar Serviço</button>
+                </div>
+            }
+        </div>
+    </div>
+</main>
