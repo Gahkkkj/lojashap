@@ -1,7 +1,7 @@
-CREATE DATABASE tech_in_triunfo;
+CREATE DATABASE IF NOT EXISTS tech_in_triunfo;
 USE tech_in_triunfo;
 
-
+-- Tabela de Usuários
 CREATE TABLE usuarios (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -11,26 +11,27 @@ CREATE TABLE usuarios (
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Tabela de Produtos
 CREATE TABLE produtos (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
-    Valor DECIMAL(10, 2) NOT NULL,
+    Valor DECIMAL(10,2) NOT NULL,
     Quantidade INT NOT NULL,
     Descricao TEXT,
     Imagem LONGBLOB,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Tabela de Serviços
 CREATE TABLE servicos (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
-    Valor DECIMAL(10, 2) NOT NULL,
+    Valor DECIMAL(10,2) NOT NULL,
     Descricao TEXT,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tabela de Contatos
 CREATE TABLE contatos (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -39,7 +40,7 @@ CREATE TABLE contatos (
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Tabela de Carrinhos
 CREATE TABLE carrinhos (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     UsuarioId INT NOT NULL UNIQUE,
@@ -47,16 +48,44 @@ CREATE TABLE carrinhos (
     FOREIGN KEY (UsuarioId) REFERENCES usuarios(Id) ON DELETE CASCADE
 );
 
+-- Tabela de Itens do Carrinho
 CREATE TABLE itens_carrinho (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     CarrinhoId INT NOT NULL,
-    ProdutoId INT NOT NULL,
+    ProdutoId INT NULL,
+    ServicoId INT NULL,
     Quantidade INT NOT NULL,
-    Nome VARCHAR(100) NOT NULL, 
-    Valor DECIMAL(10, 2) NOT NULL, 
-    Imagem LONGBLOB, 
+    Nome VARCHAR(100) NOT NULL,
+    Valor DECIMAL(10,2) NOT NULL,
+    Imagem LONGBLOB,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (CarrinhoId) REFERENCES carrinhos(Id) ON DELETE CASCADE,
     FOREIGN KEY (ProdutoId) REFERENCES produtos(Id) ON DELETE CASCADE,
-    UNIQUE (CarrinhoId, ProdutoId)
+    FOREIGN KEY (ServicoId) REFERENCES servicos(Id) ON DELETE CASCADE,
+    UNIQUE (CarrinhoId, ProdutoId),
+    UNIQUE (CarrinhoId, ServicoId)
+);
+
+-- Tabela de Pedidos
+CREATE TABLE pedidos (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    UsuarioId INT NOT NULL,
+    Total DECIMAL(10,2) NOT NULL,
+    DataPedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (UsuarioId) REFERENCES usuarios(Id) ON DELETE CASCADE
+);
+
+-- Tabela de Itens do Pedido
+CREATE TABLE pedidoitems (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    PedidoId INT NOT NULL,
+    Nome VARCHAR(100) NOT NULL,
+    ValorUnitario DECIMAL(10,2) NOT NULL,
+    Quantidade INT NOT NULL,
+    Tipo ENUM('Produto', 'Servico') NOT NULL,
+    ProdutoId INT NULL,
+    ServicoId INT NULL,
+    FOREIGN KEY (PedidoId) REFERENCES pedidos(Id) ON DELETE CASCADE,
+    FOREIGN KEY (ProdutoId) REFERENCES produtos(Id) ON DELETE SET NULL,
+    FOREIGN KEY (ServicoId) REFERENCES servicos(Id) ON DELETE SET NULL
 );

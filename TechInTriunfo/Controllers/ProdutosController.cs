@@ -74,7 +74,7 @@ public class ProdutosController : Controller
             {
 
                 var produtoExistente = await _context.Produtos.FindAsync(id);
-                
+                if (produtoExistente == null) return NotFound(); 
                 produtoExistente.Nome = produto.Nome;
                 produtoExistente.Valor = produto.Valor;
                 produtoExistente.Quantidade = produto.Quantidade;
@@ -117,7 +117,7 @@ public class ProdutosController : Controller
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var produto = await _context.Produtos.FindAsync(id);
-        _context.Produtos.Remove(produto);
+        if (produto != null) _context.Produtos.Remove(produto);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }

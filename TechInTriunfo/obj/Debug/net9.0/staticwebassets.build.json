@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AUTHvOuAl6OMYEP4hP9YeXE6Co2vT5qG2f8jYaRm7nU=",
+  "Hash": "3ez3T4XQbfwrnEtCul3owwjRp9Nwa9NDvPz83CS571E=",
   "Source": "TechInTriunfo",
   "BasePath": "_content/TechInTriunfo",
   "Mode": "Default",
@@ -794,12 +794,12 @@
       "OriginalItemSpec": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-6eepo9iu9k.gz",
+      "Identity": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-pscyu1cq56.gz",
       "SourceId": "TechInTriunfo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TechInTriunfo",
-      "RelativePath": "css/styles#[.{fingerprint=6eepo9iu9k}]?.css.gz",
+      "RelativePath": "css/styles#[.{fingerprint=pscyu1cq56}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -808,8 +808,8 @@
       "RelatedAsset": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\css\\styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "7xuos8jqgy",
-      "Integrity": "ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU=",
+      "Fingerprint": "dytuycsbe6",
+      "Integrity": "23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\css\\styles.css"
@@ -1459,8 +1459,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6eepo9iu9k",
-      "Integrity": "HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA=",
+      "Fingerprint": "pscyu1cq56",
+      "Integrity": "t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
@@ -3173,13 +3173,13 @@
       ]
     },
     {
-      "Route": "css/styles.6eepo9iu9k.css",
-      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-6eepo9iu9k.gz",
+      "Route": "css/styles.css",
+      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-pscyu1cq56.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000355492357"
+          "Quality": "0.000317460317"
         }
       ],
       "ResponseHeaders": [
@@ -3189,19 +3189,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2812"
+          "Value": "3149"
         },
         {
           "Name": "ETag",
-          "Value": "\"ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU=\""
+          "Value": "\"23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -3217,26 +3217,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA=\""
+          "Value": "W/\"t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "6eepo9iu9k"
-        },
-        {
-          "Name": "label",
-          "Value": "css/styles.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA="
+          "Value": "sha256-t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w="
         }
       ]
     },
     {
-      "Route": "css/styles.6eepo9iu9k.css",
+      "Route": "css/styles.css",
       "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\css\\styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3246,7 +3238,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14363"
+          "Value": "17945"
         },
         {
           "Name": "Content-Type",
@@ -3254,11 +3246,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA=\""
+          "Value": "\"t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.css.gz",
+      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-pscyu1cq56.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.pscyu1cq56.css",
+      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-pscyu1cq56.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000317460317"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3149"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pscyu1cq56"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.pscyu1cq56.css",
+      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\css\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3268,7 +3405,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6eepo9iu9k"
+          "Value": "pscyu1cq56"
         },
         {
           "Name": "label",
@@ -3276,13 +3413,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA="
+          "Value": "sha256-t8hHefFVk9HGDqpwRc/8wDSF0UlkurKcYg8ZUx8713w="
         }
       ]
     },
     {
-      "Route": "css/styles.6eepo9iu9k.css.gz",
-      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-6eepo9iu9k.gz",
+      "Route": "css/styles.pscyu1cq56.css.gz",
+      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-pscyu1cq56.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3291,7 +3428,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2812"
+          "Value": "3149"
         },
         {
           "Name": "Content-Type",
@@ -3299,11 +3436,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU=\""
+          "Value": "\"23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
+          "Value": "Mon, 10 Mar 2025 19:52:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3321,7 +3458,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6eepo9iu9k"
+          "Value": "pscyu1cq56"
         },
         {
           "Name": "label",
@@ -3329,144 +3466,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU="
-        }
-      ]
-    },
-    {
-      "Route": "css/styles.css",
-      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-6eepo9iu9k.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000355492357"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2812"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA="
-        }
-      ]
-    },
-    {
-      "Route": "css/styles.css",
-      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\wwwroot\\css\\styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14363"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HpE8Z77XHcc0ENldKBpH0fzd0y/z97BptorZb3il+ZA="
-        }
-      ]
-    },
-    {
-      "Route": "css/styles.css.gz",
-      "AssetFile": "C:\\Users\\User\\OneDrive\\Área de Trabalho\\PRINCIPAL\\TechInTriunfo\\obj\\Debug\\net9.0\\compressed\\mhsw4a3veq-6eepo9iu9k.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2812"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 06:28:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ix7dCwVaWdRuEVDroskr2Kb01yD+h775u8MzXwGJieU="
+          "Value": "sha256-23qK8UpNJkmkoCIgsFuTkiZPNOncwlVbIOMm1DXzBlc="
         }
       ]
     },

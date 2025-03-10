@@ -51,6 +51,7 @@ public class UsuariosController : Controller
                 }
 
                 var userToUpdate = await _context.Usuarios.FindAsync(id);
+                if (userToUpdate == null) return NotFound(); 
                 userToUpdate.Nome = usuario.Nome;
                 userToUpdate.Email = usuario.Email;
                 userToUpdate.Telefone = usuario.Telefone;

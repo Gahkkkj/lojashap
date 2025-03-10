@@ -89,7 +89,7 @@ public class ServicosController : Controller
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var servico = await _context.Servicos.FindAsync(id);
-        _context.Servicos.Remove(servico);
+        if (servico != null) _context.Servicos.Remove(servico);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }

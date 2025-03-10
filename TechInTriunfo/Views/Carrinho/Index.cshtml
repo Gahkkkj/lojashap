@@ -18,21 +18,73 @@
         <div class="produtos-lista">
             @foreach (var item in Model.Itens)
             {
-                <div class="produto-item">
+                <div class="cart-item @(item.Servico != null ? "servico-item" : "produto-item")">
                     <div class="imagem-produto">
                         @if (item.Imagem != null)
                         {
                             <img src="data:image/png;base64,@Convert.ToBase64String(item.Imagem)" 
                                  alt="@item.Nome" />
                         }
+                        else if (item.Servico != null)
+                        {
+                            <div class="servico-icon">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                        }
+                        else if (item.Produto != null)
+                        {
+                            <div class="produto-icon">
+                                <i class="bi bi-cart"></i>
+                            </div>
+                        }
                     </div>
-                    <div class="produto-info">
+                    <div class="item-info">
+                        @if (item.Servico != null)
+                        {
+                            <span class="badge-servico">SERVIÇO</span>
+                        }
+                        else
+                        {
+                            <span class="badge-produto">PRODUTO</span>
+                        }
                         <h4>@item.Nome</h4>
                         <p class="preco-unitario">@item.Valor.ToString("C")</p>
-                        <p class="quantidade">Quantidade: @item.Quantidade</p>
+                        
+                        <div class="quantity-control">
+                            <form asp-action="DiminuiQuantidade" method="post">
+                                <input type="hidden" name="itemId" value="@item.Id" />
+                                <button type="submit" class="btn-quantity" 
+                                        @(item.Quantidade == 1 ? "disabled" : "")>
+                                    -
+                                </button>
+                            </form>
+                            
+                            <span class="quantity">@item.Quantidade</span>
+                            
+                            <form asp-action="AumentaQuantidade" method="post">
+                                <input type="hidden" name="itemId" value="@item.Id" />
+                                <button type="submit" class="btn-quantity" 
+                                        @(item.Produto != null && item.Quantidade >= item.Produto.Quantidade ? "disabled" : "")>
+                                    +
+                                </button>
+                            </form>
+                        </div>
+
+                        <p class="quantidade-info">
+                            @if (item.Servico != null)
+                            {
+                                <span class="info-adicional">Contratação única</span>
+                            }
+                            else
+                            {
+                                <span class="info-adicional">Disponível: @item.Produto?.Quantidade</span>
+                            }
+                        </p>
+                        
                         <p class="total-item">Total: @((item.Valor * item.Quantidade).ToString("C"))</p>
+                        
                         <form asp-action="Remove" method="post">
-                            <input type="hidden" name="produtoId" value="@item.ProdutoId" />
+                            <input type="hidden" name="itemId" value="@item.Id" />
                             <button type="submit" class="btn-remover">
                                 <i class="bi bi-trash"></i> Remover
                             </button>
@@ -45,6 +97,7 @@
         <div class="resumo-compra">
             <h3 class="total-carrinho">Total: @Model.Total.ToString("C")</h3>
             <form asp-action="FinalizarCompra" method="post">
+                @Html.AntiForgeryToken()
                 <button type="submit" class="btn-finalizar">
                     <i class="bi bi-currency-dollar"></i> Finalizar Compra
                 </button>

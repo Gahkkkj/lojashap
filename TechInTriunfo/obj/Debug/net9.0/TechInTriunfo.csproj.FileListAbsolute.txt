@@ -118,4 +118,4 @@ C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.
 C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.0\TechInTriunfo.pdb
 C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.0\TechInTriunfo.genruntimeconfig.cache
 C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.0\ref\TechInTriunfo.dll
-C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.0\compressed\mhsw4a3veq-6eepo9iu9k.gz
+C:\Users\User\OneDrive\Área de Trabalho\PRINCIPAL\TechInTriunfo\obj\Debug\net9.0\compressed\mhsw4a3veq-pscyu1cq56.gz

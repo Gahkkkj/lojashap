@@ -25,7 +25,13 @@
                     }
                     <a href="@Url.Action("Edit", new { id = servico.Id })" class="btn-comprar">Editar</a>
                     <a href="@Url.Action("Delete", new { id = servico.Id })" class="btn-comprar">Excluir</a>
-                    <button class="btn-chat">Contratar Serviço</button>
+                    <form asp-action="AddToCart" asp-controller="Carrinho" method="post">
+                        <input type="hidden" name="servicoId" value="@servico.Id" />
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn-comprar">
+                            <i class="bi bi-cart-plus"></i> Contratar
+                        </button>
+                    </form>
                 </div>
             }
         </div>

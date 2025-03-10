@@ -1,0 +1,51 @@
+@model IEnumerable<TechInTriunfo.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Lista de Pedidos Confirmados";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="card-container">
+        @foreach (var pedido in Model)
+        {
+            <div class="card card-pedido">
+                <div class="card-header-pedido">
+                    <h5 class="card-title">Nome do usuario:<h5>
+                            <h5 class="card-title">@pedido.Usuario?.Nome</h5>
+
+                </div>
+                <div class="card-body">
+                    <h6 class="detalhe-titulo">Itens do Pedido:</h6>
+                    <ul class="list-group">
+                        @if (pedido.Itens != null && pedido.Itens.Any())
+                        {
+                            foreach (var item in pedido.Itens)
+                            {
+                                <li class="list-group-item">
+                                    <strong>@item.Nome</strong> - Quantidade: @item.Quantidade - Valor Unitário:
+                                    @item.ValorUnitario.ToString("C") - Total: @((item.Quantidade *
+                                    item.ValorUnitario).ToString("C"))
+
+                    </li>
+                                        }
+                        }
+                        else
+                        {
+                            <li class="list-group-item">Nenhum item encontrado.</li>
+                        }
+                    </ul>
+                    <p class="card-subtitle mb-2">Data do Pedido: @pedido.DataPedido.ToString("dd/MM/yyyy HH:mm")
+                    </p>
+                    <h7>Total: @pedido.Total.ToString("C")</h7>
+
+
+
+                    <a asp-action="Delete" asp-route-id="@pedido.Id" class="btn-comprar">Excluir</a>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
