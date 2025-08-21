@@ -6,11 +6,8 @@ Projeto de uma loja virtual desenvolvido com C# e o framework ASP.NET Core MVC. 
 
 ### 📸 Demonstração Visual
 
-**É altamente recomendado que você adicione um screenshot ou GIF da aplicação aqui!** Isso aumenta muito o interesse pelo projeto.
-
-_Exemplo de como adicionar uma imagem:_
-`![Página Principal da LojaShap](https://i.imgur.com/link_da_sua_imagem.png)`
-
+* **Link do canvas para demonstração da apresentação**
+https://www.canva.com/design/DAGwq8Qigoc/TUWpJU2HXWasyxNeQR8QrQ/view?utm_content=DAGwq8Qigoc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he696c7a8d7
 ---
 
 ## ✨ Funcionalidades
